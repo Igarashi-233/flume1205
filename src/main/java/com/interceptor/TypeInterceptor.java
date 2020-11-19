@@ -32,13 +32,13 @@ public class TypeInterceptor implements Interceptor {
         //根据body中是否有“hello”来决定添加怎样的头信息
         if (body.contains("hello")) {
 
-            //添加头信息
-            headers.put("type", "IGARASHI");
+            //添加头信息(整合KAFKA)
+            headers.put("topic", "first");
 
         } else {
 
             //添加头信息
-            headers.put("type", "bigdata");
+            headers.put("topic", "second");
 
         }
 
